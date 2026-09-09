@@ -47,7 +47,7 @@ fig_ts = px.line(
     title="Total Global Sales per Year",
     labels={"Global_Sales": "Total Global Sales (Millions)", "Year": "Release Year"}
 )
-st.plotly_chart(fig_ts, use_container_width=True)
+st.plotly_chart(fig_ts, width='stretch')
 
 
 st.divider()
@@ -97,7 +97,7 @@ with col1:
         """
     )
 with col2:
-    st.plotly_chart(fig_all, use_container_width=True)
+    st.plotly_chart(fig_all, width='stretch')
 
 st.divider()
 
@@ -123,7 +123,7 @@ with col3:
     st.success("The model **successfully** predicts the dependent variable!")
     st.markdown("Now that the model fits the reliable historical data, we can use it to predict sales for years beyond 2010 as if the data recording hadn't dropped off.")
 with col4:
-    st.plotly_chart(fig_filtered, use_container_width=True)
+    st.plotly_chart(fig_filtered, width='stretch')
 
 st.divider()
 

@@ -100,7 +100,7 @@ st.markdown(
     """
 )
 
-st.dataframe(desc_data, use_container_width=True)
+st.dataframe(desc_data, width='stretch')
 
 st.info(
     """
@@ -171,7 +171,7 @@ st.markdown(
     """
 )
 
-st.dataframe(table, use_container_width=True)
+st.dataframe(table, width='stretch')
 
 st.info(
     """

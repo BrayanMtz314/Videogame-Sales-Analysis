@@ -66,7 +66,7 @@ for genre, group in df.groupby("Genre"):
 shapiro_df = pd.DataFrame(results)
 shapiro_df["P-Value"] = shapiro_df["P-Value"].apply(lambda x: f"{x:.2e}")
 
-st.dataframe(shapiro_df, use_container_width=True)
+st.dataframe(shapiro_df, width='stretch')
 
 st.warning(
     """

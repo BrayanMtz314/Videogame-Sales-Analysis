@@ -43,7 +43,7 @@ df_info = pd.DataFrame(
     }
 )
 
-st.dataframe(df_info, use_container_width=True)
+st.dataframe(df_info, width='stretch')
 
 st.divider()
 
@@ -56,7 +56,7 @@ st.markdown("The `Rank` column acts as a secondary index and isn't necessary for
 
 # Assign to a new variable to avoid mutating the cached dataframe
 cleaned_df = df.drop(columns=["Rank"])
-st.dataframe(cleaned_df.head(), use_container_width=True)
+st.dataframe(cleaned_df.head(), width='stretch')
 
 # --- Step B ---
 st.subheader("Handling Duplicates")
@@ -88,7 +88,7 @@ st.divider()
 st.header("3. Final Dataset")
 st.markdown("Here is a preview of our fully cleaned dataset, ready for the next stages of our pipeline:")
 
-st.dataframe(cleaned_df.head(), use_container_width=True)
+st.dataframe(cleaned_df.head(), width='stretch')
 
 # Instead of overwriting the local file on every app rerun, provide a download button!
 csv = cleaned_df.to_csv(index=False).encode('utf-8')

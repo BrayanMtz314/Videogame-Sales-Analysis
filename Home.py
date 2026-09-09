@@ -46,7 +46,7 @@ st.header("A quick look at the raw dataset")
 def load_preview():
     return pd.read_csv("data/vgsales.csv", nrows=10)
 
-st.dataframe(load_preview(), use_container_width=True)
+st.dataframe(load_preview(), width='stretch')
 
 st.divider()
 

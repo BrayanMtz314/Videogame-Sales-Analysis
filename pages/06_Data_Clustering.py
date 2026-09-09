@@ -53,7 +53,7 @@ fig_initial = px.scatter(
     opacity=0.6,
     hover_data=["Name"]
 )
-st.plotly_chart(fig_initial, use_container_width=True)
+st.plotly_chart(fig_initial, width='stretch')
 
 st.divider()
 
@@ -144,7 +144,7 @@ if st.button("Run K-Means", type="primary"):
         hoverinfo='skip'
     ))
     
-    st.plotly_chart(fig_clusters, use_container_width=True)
+    st.plotly_chart(fig_clusters, width='stretch')
     
     # --- Dynamic Conclusion ---
     if user_k == 2:

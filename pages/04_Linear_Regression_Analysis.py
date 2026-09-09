@@ -43,7 +43,7 @@ fig_corr = px.imshow(
     color_continuous_scale="RdBu_r",
     aspect="auto",
 )
-st.plotly_chart(fig_corr, use_container_width=True)
+st.plotly_chart(fig_corr, width='stretch')
 
 st.divider()
 
@@ -124,4 +124,4 @@ with col2:
         legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01)
     )
     
-    st.plotly_chart(fig_reg, use_container_width=True)
+    st.plotly_chart(fig_reg, width='stretch')

@@ -48,7 +48,7 @@ fig_dist = px.scatter(
     opacity=0.7,
     hover_data=["Name"] # Shows the game name on hover!
 )
-st.plotly_chart(fig_dist, use_container_width=True)
+st.plotly_chart(fig_dist, width='stretch')
 
 st.divider()
 
@@ -118,4 +118,4 @@ if st.button("Predict Platform", type="primary"):
     ))
     
     fig_result.update_layout(title='KNN Prediction Result')
-    st.plotly_chart(fig_result, use_container_width=True)
+    st.plotly_chart(fig_result, width='stretch')
